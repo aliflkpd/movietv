@@ -56,6 +56,7 @@ void init() {
   locator.registerFactory(() => TopRatedMoviesBloc(locator()));
   locator.registerFactory(() => DetailMovieBloc(locator()));
   locator.registerFactory(() => MovieRecommendationBloc(locator()));
+  locator.registerFactory(() => MovieSearchBloc(locator()));
   locator.registerFactory(
       () => WatchlistMovieBloc(locator(), locator(), locator(), locator()));
   locator.registerFactory(() => NowPlayingTvsBloc(locator()));
@@ -63,6 +64,7 @@ void init() {
   locator.registerFactory(() => TopRatedTvsBloc(locator()));
   locator.registerFactory(() => DetailTvBloc(locator()));
   locator.registerFactory(() => TvRecommendationBloc(locator()));
+  locator.registerFactory(() => TvSearchBloc(locator()));
   locator.registerFactory(
       () => WatchlistTvBloc(locator(), locator(), locator(), locator()));
 

@@ -101,7 +101,7 @@ class MovieRecommendationBloc extends Bloc<MovieEvent, MovieState> {
 
 class MovieSearchBloc extends Bloc<MovieEvent, MovieState> {
   final SearchMovies _searchMovies;
-  MovieSearchBloc(this._searchMovies) : super(MovieLoading()) {
+  MovieSearchBloc(this._searchMovies) : super(MovieEmpty()) {
     on<FetchMoviesSearch>((event, emit) async {
       final String query = event.query;
       emit(MovieLoading());
