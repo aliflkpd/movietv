@@ -13,6 +13,8 @@ import 'package:movietv/presentation/pages/tv/watchlist_tvs_page.dart';
 import 'package:movietv/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movietv/presentation/bloc/tv/tv_bloc.dart';
 
 class HomeTvPage extends StatefulWidget {
   static const ROUTE_NAME = '/home-tv';
@@ -25,10 +27,11 @@ class _HomeTvPageState extends State<HomeTvPage> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(() => Provider.of<TvListNotifier>(context, listen: false)
-      ..fetchNowPlayingTvs()
-      ..fetchPopularTvs()
-      ..fetchTopRatedTvs());
+    Future.microtask(() {
+      context.read<NowPlayingTvsBloc>().add(FetchNowPlayingTvs());
+      context.read<PopularTvsBloc>().add(FetchPopularTvs());
+      context.read<TopRatedTvsBloc>().add(FetchTopRatedTvs());
+    });
   }
 
   @override
@@ -107,16 +110,15 @@ class _HomeTvPageState extends State<HomeTvPage> {
               onTap: () =>
                   Navigator.pushNamed(context, NowPlayingTvPage.ROUTE_NAME),
             ),
-            Consumer<TvListNotifier>(builder: (context, data, child) {
-              final state = data.nowPlayingState;
-              if (state == RequestState.Loading) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (state == RequestState.Loaded) {
-                return TvList(data.nowPlayinTvs);
+            BlocBuilder<NowPlayingTvsBloc, TvState>(builder: (context, state) {
+              if (state is TvLoading) {
+                return Center(child: CircularProgressIndicator());
+              } else if (state is TvHasData) {
+                return TvList(state.tvs);
+              } else if (state is TvHasError) {
+                return Text(state.message);
               } else {
-                return Text('Failed');
+                return Text('failed');
               }
             }),
             _buildSubHeading(
@@ -124,16 +126,15 @@ class _HomeTvPageState extends State<HomeTvPage> {
               onTap: () =>
                   Navigator.pushNamed(context, PopularTvsPage.ROUTE_NAME),
             ),
-            Consumer<TvListNotifier>(builder: (context, data, child) {
-              final state = data.popularTvsState;
-              if (state == RequestState.Loading) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (state == RequestState.Loaded) {
-                return TvList(data.popularTvs);
+            BlocBuilder<PopularTvsBloc, TvState>(builder: (context, state) {
+              if (state is TvLoading) {
+                return Center(child: CircularProgressIndicator());
+              } else if (state is TvHasData) {
+                return TvList(state.tvs);
+              } else if (state is TvHasError) {
+                return Text(state.message);
               } else {
-                return Text('Failed');
+                return Text('failed');
               }
             }),
             _buildSubHeading(
@@ -141,16 +142,15 @@ class _HomeTvPageState extends State<HomeTvPage> {
               onTap: () =>
                   Navigator.pushNamed(context, TopRatedTvsPage.ROUTE_NAME),
             ),
-            Consumer<TvListNotifier>(builder: (context, data, child) {
-              final state = data.topRatedTvsState;
-              if (state == RequestState.Loading) {
-                return Center(
-                  child: CircularProgressIndicator(),
-                );
-              } else if (state == RequestState.Loaded) {
-                return TvList(data.topRatedTvs);
+            BlocBuilder<TopRatedTvsBloc, TvState>(builder: (context, state) {
+              if (state is TvLoading) {
+                return Center(child: CircularProgressIndicator());
+              } else if (state is TvHasData) {
+                return TvList(state.tvs);
+              } else if (state is TvHasError) {
+                return Text(state.message);
               } else {
-                return Text('Failed');
+                return Text('failed');
               }
             }),
           ],

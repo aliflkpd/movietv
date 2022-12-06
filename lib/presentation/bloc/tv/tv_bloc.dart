@@ -100,8 +100,8 @@ class TvRecommendationBloc extends Bloc<TvEvent, TvState> {
 
 class TvSearchBloc extends Bloc<TvEvent, TvState> {
   final SearchTvs _searchTvs;
-  TvSearchBloc(this._searchTvs) : super(TvLoading()) {
-    on<FechtTvsSearch>((event, emit) async {
+  TvSearchBloc(this._searchTvs) : super(TvEmpty()) {
+    on<FetchTvsSearch>((event, emit) async {
       final String query = event.query;
       emit(TvLoading());
 

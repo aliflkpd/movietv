@@ -28,9 +28,9 @@ class FetchRecommendationTvs extends TvEvent {
   List<Object> get props => [id];
 }
 
-class FechtTvsSearch extends TvEvent {
+class FetchTvsSearch extends TvEvent {
   final String query;
-  const FechtTvsSearch(this.query);
+  const FetchTvsSearch(this.query);
 
   @override
   List<Object> get props => [query];
