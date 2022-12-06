@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
-import 'package:movietv/data/datasources/tv_local_data_source.dart';
-import 'package:movietv/data/datasources/tv_remote_data_source.dart';
-import 'package:movietv/data/models/tv_table.dart';
-import 'package:movietv/domain/entities/tv.dart';
-import 'package:movietv/domain/entities/tv_detail.dart';
+import 'package:movietv/data/datasources/tv/tv_local_data_source.dart';
+import 'package:movietv/data/datasources/tv/tv_remote_data_source.dart';
+import 'package:movietv/data/models/tv/tv_table.dart';
+import 'package:movietv/domain/entities/tv/tv.dart';
+import 'package:movietv/domain/entities/tv/tv_detail.dart';
 import 'package:movietv/domain/repositories/tv_repository.dart';
 import 'package:movietv/common/exception.dart';
 import 'package:movietv/common/failure.dart';

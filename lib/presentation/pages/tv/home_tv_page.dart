@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:movietv/common/constants.dart';
-import 'package:movietv/domain/entities/tv.dart';
+import 'package:movietv/domain/entities/tv/tv.dart';
 import 'package:movietv/presentation/pages/tv/now_playing_tv_page.dart';
 import 'package:movietv/presentation/provider/tv_list_notifier.dart';
 import 'package:movietv/presentation/pages/about_page.dart';

@@ -1,7 +1,7 @@
-import 'package:movietv/domain/entities/movie.dart';
-import 'package:movietv/domain/entities/movie_detail.dart';
-import 'package:movietv/domain/usecases/get_movie_detail.dart';
-import 'package:movietv/domain/usecases/get_movie_recommendations.dart';
+import 'package:movietv/domain/entities/movie/movie.dart';
+import 'package:movietv/domain/entities/movie/movie_detail.dart';
+import 'package:movietv/domain/usecases/movie/get_movie_detail.dart';
+import 'package:movietv/domain/usecases/movie/get_movie_recommendations.dart';
 import 'package:movietv/common/state_enum.dart';
 import 'package:movietv/domain/usecases/get_watchlist_status.dart';
 import 'package:movietv/domain/usecases/remove_watchlist.dart';

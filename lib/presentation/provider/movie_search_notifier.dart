@@ -1,6 +1,6 @@
 import 'package:movietv/common/state_enum.dart';
-import 'package:movietv/domain/entities/movie.dart';
-import 'package:movietv/domain/usecases/search_movies.dart';
+import 'package:movietv/domain/entities/movie/movie.dart';
+import 'package:movietv/domain/usecases/movie/search_movies.dart';
 import 'package:flutter/foundation.dart';
 
 class MovieSearchNotifier extends ChangeNotifier {

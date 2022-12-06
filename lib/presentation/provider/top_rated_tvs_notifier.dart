@@ -1,6 +1,6 @@
 import 'package:movietv/common/state_enum.dart';
-import 'package:movietv/domain/entities/tv.dart';
-import 'package:movietv/domain/usecases/get_top_rated_tvs.dart';
+import 'package:movietv/domain/entities/tv/tv.dart';
+import 'package:movietv/domain/usecases/tv/get_top_rated_tvs.dart';
 import 'package:flutter/foundation.dart';
 
 class TopRatedTvsNotifier extends ChangeNotifier {

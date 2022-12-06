@@ -1,7 +1,7 @@
 import 'package:movietv/common/state_enum.dart';
-import 'package:movietv/domain/entities/movie.dart';
-import 'package:movietv/domain/usecases/get_watchlist_movies.dart';
-import 'package:movietv/domain/entities/tv.dart';
+import 'package:movietv/domain/entities/movie/movie.dart';
+import 'package:movietv/domain/usecases/movie/get_watchlist_movies.dart';
+import 'package:movietv/domain/entities/tv/tv.dart';
 import 'package:flutter/foundation.dart';
 
 class WatchlistMovieNotifier extends ChangeNotifier {

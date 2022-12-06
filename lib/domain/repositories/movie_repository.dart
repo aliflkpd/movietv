@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:movietv/domain/entities/movie.dart';
-import 'package:movietv/domain/entities/movie_detail.dart';
+import 'package:movietv/domain/entities/movie/movie.dart';
+import 'package:movietv/domain/entities/movie/movie_detail.dart';
 import 'package:movietv/common/failure.dart';
 
 abstract class MovieRepository {

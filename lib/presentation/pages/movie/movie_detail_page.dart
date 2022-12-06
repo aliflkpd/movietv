@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:movietv/common/constants.dart';
 import 'package:movietv/domain/entities/genre.dart';
-import 'package:movietv/domain/entities/movie.dart';
-import 'package:movietv/domain/entities/movie_detail.dart';
+import 'package:movietv/domain/entities/movie/movie.dart';
+import 'package:movietv/domain/entities/movie/movie_detail.dart';
 import 'package:movietv/presentation/provider/movie_detail_notifier.dart';
 import 'package:movietv/common/state_enum.dart';
 import 'package:flutter/material.dart';

@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:movietv/common/failure.dart';
-import 'package:movietv/domain/entities/movie_detail.dart';
+import 'package:movietv/domain/entities/movie/movie_detail.dart';
 import 'package:movietv/domain/repositories/movie_repository.dart';
-import 'package:movietv/domain/entities/tv_detail.dart';
+import 'package:movietv/domain/entities/tv/tv_detail.dart';
 import 'package:movietv/domain/repositories/tv_repository.dart';
 
 class RemoveWatchlist {

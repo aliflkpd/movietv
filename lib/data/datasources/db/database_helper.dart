@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:movietv/data/models/movie_table.dart';
-import 'package:movietv/data/models/tv_table.dart';
+import 'package:movietv/data/models/movie/movie_table.dart';
+import 'package:movietv/data/models/tv/tv_table.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseHelper {
