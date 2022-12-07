@@ -1,5 +1,6 @@
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:movietv/common/constants.dart';
+import 'package:movietv/common/ssl_helper.dart';
 import 'package:movietv/common/utils.dart';
 
 import 'package:movietv/presentation/pages/about_page.dart';
@@ -35,7 +36,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-
+  SSLHelper.init();
   di.init();
   runApp(MyApp());
 }
