@@ -2,13 +2,7 @@ import 'package:movietv/presentation/bloc/movie/movie_bloc.dart';
 import 'package:movietv/domain/entities/movie/movie.dart';
 import 'package:movietv/domain/entities/movie/movie_detail.dart';
 import 'package:movietv/domain/entities/genre.dart';
-import 'package:movietv/domain/usecases/movie/get_movie_detail.dart';
-import 'package:movietv/domain/usecases/movie/get_movie_recommendations.dart';
 import 'package:movietv/common/failure.dart';
-import 'package:movietv/domain/usecases/get_watchlist_status.dart';
-import 'package:movietv/domain/usecases/remove_watchlist.dart';
-import 'package:movietv/domain/usecases/save_watchlist.dart';
-
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
