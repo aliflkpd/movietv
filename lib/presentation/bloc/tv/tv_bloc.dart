@@ -6,7 +6,7 @@ import 'package:movietv/domain/usecases/tv/get_top_rated_tvs.dart';
 import 'package:movietv/domain/usecases/tv/get_watchlist_tvs.dart';
 import 'package:movietv/domain/usecases/tv/get_tv_detail.dart';
 import 'package:movietv/domain/usecases/tv/get_tv_recommendations.dart';
-import 'package:movietv/domain/usecases/movie/search_tvs.dart';
+import 'package:movietv/domain/usecases/tv/search_tvs.dart';
 import 'package:movietv/domain/usecases/get_watchlist_status.dart';
 import 'package:movietv/domain/usecases/remove_watchlist.dart';
 import 'package:movietv/domain/usecases/save_watchlist.dart';
