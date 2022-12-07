@@ -1,6 +1,5 @@
 import 'package:movietv/common/constants.dart';
 import 'package:movietv/common/state_enum.dart';
-import 'package:movietv/presentation/provider/movie_search_notifier.dart';
 import 'package:movietv/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

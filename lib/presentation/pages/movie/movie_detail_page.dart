@@ -4,7 +4,6 @@ import 'package:movietv/domain/entities/genre.dart';
 import 'package:movietv/domain/entities/movie/movie.dart';
 import 'package:movietv/domain/entities/movie/movie_detail.dart';
 import 'package:movietv/presentation/bloc/movie/movie_bloc.dart';
-import 'package:movietv/presentation/provider/movie_detail_notifier.dart';
 import 'package:movietv/common/state_enum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
