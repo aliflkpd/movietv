@@ -1,3 +1,4 @@
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:movietv/common/constants.dart';
 import 'package:movietv/common/utils.dart';
 
@@ -33,6 +34,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+
   di.init();
   runApp(MyApp());
 }

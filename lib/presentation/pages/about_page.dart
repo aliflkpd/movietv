@@ -33,6 +33,10 @@ class AboutPage extends StatelessWidget {
                   ),
                 ),
               ),
+              TextButton(
+                onPressed: () => throw Exception(),
+                child: const Text("Throw Test Exception"),
+              ),
             ],
           ),
           SafeArea(
