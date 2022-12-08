@@ -29,7 +29,7 @@ class _NowPlayingTvPageState extends State<NowPlayingTvPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: BlocBuilder<PopularTvsBloc, TvState>(
+        child: BlocBuilder<NowPlayingTvsBloc, TvState>(
           builder: (context, state) {
             if (state is TvLoading) {
               return Center(
