@@ -9,9 +9,10 @@ class Shared {
     SecurityContext context = SecurityContext(withTrustedRoots: false);
     try {
       List<int> bytes = [];
-      bytes = (await rootBundle.load('assets/themoviedb.org.pem'))
-          .buffer
-          .asUint8List();
+      bytes =
+          (await rootBundle.load('certificate/developers.themoviedb.org.crt'))
+              .buffer
+              .asUint8List();
       context.setTrustedCertificatesBytes(bytes);
       log('createHttpClient() - cert added!');
     } on TlsException catch (e) {
