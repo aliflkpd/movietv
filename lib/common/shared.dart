@@ -10,7 +10,7 @@ class Shared {
     try {
       List<int> bytes = [];
       bytes =
-          (await rootBundle.load('certificate/developers.themoviedb.org.crt'))
+          (await rootBundle.load('certificate/themoviedb.org.pem'))
               .buffer
               .asUint8List();
       context.setTrustedCertificatesBytes(bytes);
