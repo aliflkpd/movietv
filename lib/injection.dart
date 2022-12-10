@@ -37,7 +37,7 @@ import 'common/ssl_helper.dart';
 
 final locator = GetIt.instance;
 
-void init() {
+Future<void> init() async {
   // bloc
   locator.registerFactory(() => NowPlayingMoviesBloc(locator()));
   locator.registerFactory(() => PopularMoviesBloc(locator()));
@@ -106,5 +106,5 @@ void init() {
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => SSLHelper.client());
+  locator.registerLazySingleton(() => SSLHelper.client);
 }
