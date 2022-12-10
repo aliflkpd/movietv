@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:336831605891:ios:65a404704d41f55daa3fb6",
-  "FIREBASE_PROJECT_ID": "movietv-a324c",
-  "GCM_SENDER_ID": "336831605891"
+  "GOOGLE_APP_ID": "1:463754159915:ios:ec3e84d47bef3efabec76e",
+  "FIREBASE_PROJECT_ID": "apps-movie-tv-ditonton",
+  "GCM_SENDER_ID": "463754159915"
 }

@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "336831605891",
-    "project_id": "movietv-a324c",
-    "storage_bucket": "movietv-a324c.appspot.com"
+    "project_number": "463754159915",
+    "firebase_url": "https://apps-movie-tv-ditonton-default-rtdb.firebaseio.com",
+    "project_id": "apps-movie-tv-ditonton",
+    "storage_bucket": "apps-movie-tv-ditonton.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:336831605891:android:f1b4ced3e0d55cf6aa3fb6",
+        "mobilesdk_app_id": "1:463754159915:android:fd48d6734b492886bec76e",
         "android_client_info": {
-          "package_name": "com.example.movietv"
+          "package_name": "com.dicoding.ditonton"
         }
       },
       "oauth_client": [
         {
-          "client_id": "336831605891-ur9je3hvnaeb7q8aeogvqs5co6kfill6.apps.googleusercontent.com",
+          "client_id": "463754159915-2ehp7918v990476dksobh0pp2r4hnn3f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAr7km1jgc2yY1uhdUyz3jood4V8wLR09A"
+          "current_key": "AIzaSyDpzDgJ7iHw-BXHeNLQbW-V7McJyfwUiOo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "336831605891-ur9je3hvnaeb7q8aeogvqs5co6kfill6.apps.googleusercontent.com",
+              "client_id": "463754159915-2ehp7918v990476dksobh0pp2r4hnn3f.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "463754159915-ugulba5ud36no21fp9a5eomh80vldo7a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dicoding.ditonton"
+              }
             }
           ]
         }
