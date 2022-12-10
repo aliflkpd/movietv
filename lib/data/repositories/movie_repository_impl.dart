@@ -28,6 +28,10 @@ class MovieRepositoryImpl implements MovieRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return const Left(CommonFailure('Certificted not valid!'));
+    } catch (e) {
+      return Left(CommonFailure(e.toString()));
     }
   }
 
