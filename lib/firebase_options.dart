@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,23 +43,41 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyCwxZqJRNtzvZP5AcAuMRtsJvuBlsQuo3E',
+    appId: '1:336831605891:web:ca1a1e6bbdd4da66aa3fb6',
+    messagingSenderId: '336831605891',
+    projectId: 'movietv-a324c',
+    authDomain: 'movietv-a324c.firebaseapp.com',
+    storageBucket: 'movietv-a324c.appspot.com',
+    measurementId: 'G-YC1QX4CSGY',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDpzDgJ7iHw-BXHeNLQbW-V7McJyfwUiOo',
-    appId: '1:463754159915:android:fd48d6734b492886bec76e',
-    messagingSenderId: '463754159915',
-    projectId: 'apps-movie-tv-ditonton',
-    databaseURL: 'https://apps-movie-tv-ditonton-default-rtdb.firebaseio.com',
-    storageBucket: 'apps-movie-tv-ditonton.appspot.com',
+    apiKey: 'AIzaSyAr7km1jgc2yY1uhdUyz3jood4V8wLR09A',
+    appId: '1:336831605891:android:f1b4ced3e0d55cf6aa3fb6',
+    messagingSenderId: '336831605891',
+    projectId: 'movietv-a324c',
+    storageBucket: 'movietv-a324c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDuG0l1WVqQde9GcaeURWKRHz8WGdZARs0',
-    appId: '1:463754159915:ios:ec3e84d47bef3efabec76e',
-    messagingSenderId: '463754159915',
-    projectId: 'apps-movie-tv-ditonton',
-    databaseURL: 'https://apps-movie-tv-ditonton-default-rtdb.firebaseio.com',
-    storageBucket: 'apps-movie-tv-ditonton.appspot.com',
-    iosClientId: '463754159915-ugulba5ud36no21fp9a5eomh80vldo7a.apps.googleusercontent.com',
-    iosBundleId: 'com.dicoding.ditonton',
+    apiKey: 'AIzaSyBC5JWA_FZn1xc4FrSv3Cw8cGULdZFfD3g',
+    appId: '1:336831605891:ios:65a404704d41f55daa3fb6',
+    messagingSenderId: '336831605891',
+    projectId: 'movietv-a324c',
+    storageBucket: 'movietv-a324c.appspot.com',
+    iosClientId: '336831605891-pu1jbp2onr1gr68mcj8tjeedcg94bavp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.movietv',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyBC5JWA_FZn1xc4FrSv3Cw8cGULdZFfD3g',
+    appId: '1:336831605891:ios:65a404704d41f55daa3fb6',
+    messagingSenderId: '336831605891',
+    projectId: 'movietv-a324c',
+    storageBucket: 'movietv-a324c.appspot.com',
+    iosClientId: '336831605891-pu1jbp2onr1gr68mcj8tjeedcg94bavp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.movietv',
   );
 }
