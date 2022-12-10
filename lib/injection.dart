@@ -33,6 +33,8 @@ import 'package:movietv/presentation/bloc/tv/tv_bloc.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 
+import 'common/ssl_helper.dart';
+
 final locator = GetIt.instance;
 
 void init() {
@@ -104,5 +106,5 @@ void init() {
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => SSLHelper());
 }
